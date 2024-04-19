@@ -35,6 +35,16 @@ func _process(delta: float) -> void:
 		target_reached.emit()
 
 
-func _on_area_entered(area_that_entered: Area2D) -> void:
-	energy += 20.0
+func set_coins_count(new_coins: int) -> void:
+	coins = new_coins
+	get_node("UI/CoinsCount").text = "x" + str(coins)
+
+func set_energy(new_energy: int) -> void:
+	energy = new_energy
 	get_node("UI/EnergyBar").value = energy
+
+func _on_area_entered(area_that_entered: Area2D) -> void:
+	if area_that_entered.is_in_group("coin"):
+		set_coins_count(coins + 1)
+	elif area_that_entered.is_in_group("energy"):
+		set_energy(energy + 20)
