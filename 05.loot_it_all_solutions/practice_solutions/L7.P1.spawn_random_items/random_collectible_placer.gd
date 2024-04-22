@@ -1,4 +1,4 @@
-extends Node2D
+cextends Node2D
 
 var collectible_scenes := [
 	preload("coin.tscn"), preload("energy_pack.tscn") #
