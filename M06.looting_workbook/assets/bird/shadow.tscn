@@ -18,5 +18,6 @@ shader_parameter/shadow_gradient = SubResource("GradientTexture1D_rg04a")
 [node name="Shadow" type="Sprite2D"]
 show_behind_parent = true
 material = SubResource("ShaderMaterial_3o8dr")
-scale = Vector2(1.5625, 0.976562)
+position = Vector2(-7, 17)
+scale = Vector2(1.445, 0.977)
 texture = ExtResource("2_2mb0d")
